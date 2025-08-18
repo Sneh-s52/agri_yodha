@@ -1,0 +1,56 @@
+# AGRICULTURAL ADVISORY REPORT
+==================================================
+Query: mere pass 10 acre punjab mai jameen hai main usmai kharif season mai kya lagau?
+Generated: 2025-08-18 19:12:45
+
+## SOIL ANALYSIS
+--------------------
+Location: Punjab
+Soil Type: Alluvial
+pH Level: 6.8
+Suitable Crops: Rice, Wheat, Maize, Sugarcane, Cotton
+
+## WEATHER FORECAST
+--------------------
+Season: Kharif 2025
+Expected Rainfall: 850-950 mm
+Temperature Range: 25-35°C
+
+## MARKET ANALYSIS
+--------------------
+Rice:
+  Current Price: ₹2100/quintal
+  Forecast Price: ₹2250/quintal
+  Expected Profitability: 7.1%
+Wheat:
+  Current Price: ₹2000/quintal
+  Forecast Price: ₹2100/quintal
+  Expected Profitability: 5.0%
+Maize:
+  Current Price: ₹1800/quintal
+  Forecast Price: ₹1950/quintal
+  Expected Profitability: 8.3%
+Sugarcane:
+  Current Price: ₹350/quintal
+  Forecast Price: ₹380/quintal
+  Expected Profitability: 8.6%
+Cotton:
+  Current Price: ₹5800/quintal
+  Forecast Price: ₹6200/quintal
+  Expected Profitability: 6.9%
+
+## FINANCIAL ANALYSIS
+--------------------
+ROI Ranking:
+1. Sugarcane: 133.3% ROI (₹400,000 profit)
+2. Maize: 106.9% ROI (₹139,500 profit)
+3. Rice: 81.0% ROI (₹117,500 profit)
+
+## GOVERNMENT SCHEMES & POLICIES
+--------------------
+For Sugarcane:
+  MSP: MSP not declared for this crop
+  Available Schemes: 3
+For Maize:
+  MSP: ₹2,090 per quintal
+  Available Schemes: 3

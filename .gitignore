@@ -1,0 +1,12 @@
+agri-env/
+.cursorignore
+__pycache__/
+*.log
+.tmp
+*.bak
+/target/
+/build/
+/dist/
+.idea/
+.vscode/
+*.tmp
