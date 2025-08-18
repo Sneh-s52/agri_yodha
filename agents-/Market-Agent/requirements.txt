@@ -1,0 +1,64 @@
+# Agri Yodha Market Agent - Requirements
+# Core dependencies for the AI-powered agricultural market analysis system
+
+# Data Processing & Analysis
+pandas>=2.3.1
+numpy<2.0,>=1.26.4
+scipy>=1.16.1
+
+# AI & Machine Learning
+openai>=1.99.9
+scikit-learn>=1.7.0
+statsmodels>=0.14.5
+
+# Database & Vector Search
+pymongo>=4.14.0
+pinecone>=7.3.0
+dnspython>=2.7.0
+
+# Web Search & News
+tavily-python>=0.7.10
+requests>=2.32.4
+
+# Data Visualization
+matplotlib>=3.7.2
+seaborn>=0.12.2
+
+# Configuration & Environment
+python-dotenv>=1.0.1
+
+# HTTP & API
+httpx>=0.26.0
+urllib3>=2.5.0
+
+# Utilities
+python-dateutil>=2.8.2
+pytz>=2023.3
+tzdata>=2023.3
+packaging>=24.2
+typing-extensions>=4.14.1
+
+# Statistical & Mathematical
+patsy>=1.0.1
+
+# Text Processing
+tiktoken>=0.11.0
+regex>=2022.1.18
+
+# Async & Concurrency
+anyio>=4.2.0
+sniffio>=1.3.0
+
+# Progress & Logging
+tqdm>=4.66.1
+colorama>=0.4.6
+
+# Additional utilities
+certifi>=2025.8.3
+charset-normalizer>=3.4.3
+idna>=3.10
+six>=1.16.0
+
+# Development & Testing (optional)
+# pytest>=7.0.0
+# jupyter>=1.0.0

@@ -1,0 +1,22 @@
+# MongoDB Vector Retriever and AI Agent Dependencies
+
+# Core dependencies
+pymongo>=4.6.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+certifi>=2023.7.22
+
+# Machine learning and NLP
+scikit-learn>=1.3.0
+sentence-transformers>=2.2.0
+
+# OpenAI API
+openai>=1.0.0
+
+# Optional: For advanced embedding models
+# voyageai>=0.1.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
