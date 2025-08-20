@@ -1,11 +1,11 @@
 # AGRICULTURAL ADVISORY REPORT
 ==================================================
-Query: mere pass 10 acre punjab mai jameen hai main usmai kharif season mai kya lagau?
-Generated: 2025-08-18 19:12:45
+Query: Mango prices in Bihar
+Generated: 2025-08-18 21:59:33
 
 ## SOIL ANALYSIS
 --------------------
-Location: Punjab
+Location: Kanpur, Uttar Pradesh
 Soil Type: Alluvial
 pH Level: 6.8
 Suitable Crops: Rice, Wheat, Maize, Sugarcane, Cotton

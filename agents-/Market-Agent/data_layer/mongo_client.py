@@ -37,7 +37,11 @@ class MongoTSClient:
         self.collection = None
         try:
             if not mongo_uri:
-                raise ValueError("MONGO_URI is not set. Please check your.env file and config.py.")
+                logger.warning("MONGO_URI is not set. MongoDB functionality will be disabled.")
+                self.client = None
+                self.db = None
+                self.collection = None
+                return
 
             # The pymongo driver handles SSL/TLS automatically with 'mongodb+srv://' URIs.
             self.client = MongoClient(mongo_uri)
@@ -48,9 +52,11 @@ class MongoTSClient:
             self.client.admin.command("ping")
             logger.info("Successfully connected to MongoDB.")
         except Exception as e:
-            logger.exception("Fatal error connecting to MongoDB. The application may not function correctly.")
-            # Re-raising the exception is important so the application knows it failed to start.
-            raise
+            logger.error(f"Could not connect to MongoDB: {e}. Continuing without MongoDB functionality.")
+            # Don't raise exception, just continue without MongoDB
+            self.client = None
+            self.db = None
+            self.collection = None
 
     def get_latest_price(self, commodity: str, apmc_name: str) -> Dict[str, Any]:
         """
@@ -58,6 +64,9 @@ class MongoTSClient:
         Note: Fallback logic is best handled by the agent's tools, not the data layer.
         This function now performs a precise, case-insensitive search.
         """
+        if not self.collection:
+            logger.warning("MongoDB not available. Returning empty result.")
+            return {}
         if self.collection is None:
             return {"error": "Database connection is not available."}
 
@@ -82,6 +91,9 @@ class MongoTSClient:
             return {"error": "An internal error occurred while fetching the latest price."}
 
     def get_price_history(self, commodity: str, apmc_name: str, days: int = 365) -> pd.DataFrame:
+        if not self.collection:
+            logger.warning("MongoDB not available. Returning empty DataFrame.")
+            return pd.DataFrame()
         """
         Fetches price history for a given period and returns a Pandas DataFrame.
         """
@@ -119,6 +131,9 @@ class MongoTSClient:
             return pd.DataFrame()
 
     def get_distinct_values(self, field: str, query: Dict = None) -> List[str]:
+        if not self.collection:
+            logger.warning("MongoDB not available. Returning empty list.")
+            return []
         """
         Generic function to get a list of unique values for a given field.
         """
@@ -132,6 +147,8 @@ class MongoTSClient:
             return []
 
     def close_connection(self):
+        if not self.client:
+            return
         """
         Close the MongoDB connection.
         """
